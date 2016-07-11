@@ -3,3 +3,4 @@ node_modules
 .DS_STORE
 *.iml
 app-bundle.*
+vendor-bundle.*

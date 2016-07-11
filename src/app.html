@@ -1,3 +1,8 @@
 <template>
-  <h1>Hello Q</h1>
+  <h1>${message}</h1>
+
+  <input value.bind="firstName">
+  <input value.bind="lastName">
+  <button click.trigger="clicked()">Click me</button>
+  <h1>${fullName}</h1>
 </template>

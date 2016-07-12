@@ -1,7 +1,9 @@
 <template>
-  Party like it is ${date}
 
-  <span show.bind="date.getSeconds() % 2 != 0">
+  <require from="resources/value-converters/dateValueConverter"></require>
+  Party like it is ${date | date}
+
+  <span show.bind="date.getSeconds() % 2 != 0 & throttle:5000">
     What and odd party!
   </span>
 

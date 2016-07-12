@@ -5,6 +5,6 @@ export class Party {
   constructor() {
     setInterval(() => {
       this.date = new Date()
-    }, 5000)
+    }, 1000)
   }
 }

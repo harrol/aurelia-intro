@@ -1,0 +1,12 @@
+<template>
+  Party like it is ${date}
+
+  <span show.bind="date.getSeconds() % 2 != 0">
+    What and odd party!
+  </span>
+
+  <ul>
+    <li repeat.for="guest of guests">${guest}</li>
+  </ul>
+
+</template>

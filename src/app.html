@@ -2,6 +2,7 @@
   <h1>${message}</h1>
 
   <require from='resources/elements/party'></require>
+  <require from="resources/attributes/loggerCustomAttribute"></require>
 
   <div>
   <party></party>
@@ -13,5 +14,7 @@
   <h1>${fullName}</h1>
 
   <party></party>
+
+  <span logger.bind="fullName"></span>
 
 </template>

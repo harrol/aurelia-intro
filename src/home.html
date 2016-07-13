@@ -1,0 +1,18 @@
+<template>
+  <h1>${message}</h1>
+
+  <require from='resources/elements/party'></require>
+  <require from="resources/attributes/loggerCustomAttribute"></require>
+
+  <div>
+  <party></party>
+  </div>
+
+  <input value.bind="firstName">
+  <input value.bind="lastName">
+  <button click.trigger="clicked()">Click me</button>
+  <h1>${fullName}</h1>
+
+  <span logger.bind="fullName & debounce:1000"></span>
+
+</template>

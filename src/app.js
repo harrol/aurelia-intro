@@ -1,17 +1,12 @@
 export class App {
-  
-  message = 'Hello Qualogy';
-  
-  firstName = 'Harro';
-  lastName = 'Lissenberg';
 
+  configureRouter(config, router) {
+    this.router = router;
+    config.title = 'Aurelia';
+    config.map([
+      {route: ['', 'home'], name: 'home', moduleId: 'home', title: 'Home', nav: true},
+      {route: 'away', name: 'away', moduleId: 'away', title: 'Away', nav: true}
+    ]);
+  };
 
-  get fullName() {
-    return `${this.firstName} ${this.lastName}`;
-  }
-
-  clicked() {
-    alert(`Do not click me, ${this.firstName}`);
-  }
-  
 }

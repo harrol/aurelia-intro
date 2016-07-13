@@ -1,20 +1,11 @@
 <template>
-  <h1>${message}</h1>
 
-  <require from='resources/elements/party'></require>
-  <require from="resources/attributes/loggerCustomAttribute"></require>
+  <h1>Navigation</h1>
 
-  <div>
-  <party></party>
-  </div>
+  <ul>
+    <li repeat.for="route of router.navigation"><a href.bind="route.href">${route.title}</a></li>
+  </ul>
 
-  <input value.bind="firstName">
-  <input value.bind="lastName">
-  <button click.trigger="clicked()">Click me</button>
-  <h1>${fullName}</h1>
-
-  <party></party>
-
-  <span logger.bind="fullName & debounce:1000"></span>
+  <router-view></router-view>
 
 </template>

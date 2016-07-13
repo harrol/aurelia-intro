@@ -108,6 +108,8 @@
           "aurelia-task-queue",
           "aurelia-templating",
           "aurelia-templating-binding",
+          "aurelia-html-import-template-loader",
+          "aurelia-polymer",
           {
             "name": "text",
             "path": "../scripts/text"

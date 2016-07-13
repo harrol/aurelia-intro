@@ -1,4 +1,12 @@
+import {inject} from 'aurelia-framework';
+import {EventAggregator} from 'aurelia-event-aggregator';
+
+@inject(EventAggregator)
 export class Home {
+
+  constructor(eventAggregator) {
+    this.eventAggregator = eventAggregator;
+  }
   
   message = 'Hello Qualogy';
   
@@ -11,7 +19,7 @@ export class Home {
   }
 
   clicked() {
-    alert(`Do not click me, ${this.firstName}`);
+    this.eventAggregator.publish("JavaSIG", this.fullName);
   }
   
 }
